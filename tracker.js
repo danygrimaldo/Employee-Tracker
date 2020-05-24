@@ -27,7 +27,8 @@ function runSearch() {
             "Add a NEW Employee",
             "Add a NEW Role",
             "Add a NEW Department",
-            "Update an Employee's Role"
+            "Update an Employee's Role",
+            "EXIT"
         ]
     }).then(function (answer) {
         switch (answer.action) {
@@ -57,6 +58,10 @@ function runSearch() {
 
             case "Update an Employee Role":
                 updateRole();
+                break;
+
+            case "EXIT":
+                exit();
                 break;
         }
     });
@@ -253,3 +258,7 @@ function addRole() {
 //             });
 //     });
 // }
+
+function exit() {
+    console.log("All Done!");
+};
